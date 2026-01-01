@@ -1,9 +1,18 @@
 
 /* Page Slider */
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+* { margin: 0; 
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: Arial, sans-serif;
+    }
 
-    body { background: #f4f4f4; }
+     html {
+      scroll-behavior: smooth;
+   }
+    body { 
+      background: #f4f4f4; 
+    }
 
     .slider {
       position: relative;
@@ -357,7 +366,8 @@ a {
 
     /* ServicesSlider */
 
-  .slider2-container {
+ /* Slider container */
+.slider2-container {
   position: relative;
   width: 350px;
   height: 500px;
@@ -370,7 +380,6 @@ a {
 .slider2 {
   width: 100%;
   height: 100%;
-  overflow: hidden;
   position: relative;
   border-radius: 20px;
 }
@@ -383,19 +392,16 @@ a {
   left: 0;
   opacity: 0;
   transition: opacity 0.6s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide2.active2 {
   opacity: 1;
 }
 
-.slide2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
+/* Navigation buttons */
 .nav2 {
   position: absolute;
   background: rgba(0,0,0,0.5);
@@ -413,9 +419,7 @@ a {
 .prev2 { left: -70px; }
 .next2 { right: -70px; }
 
-.nav2:hover {
-  background: rgba(0,0,0,0.7);
-}
+.nav2:hover { background: rgba(0,0,0,0.7); }
 
 @media (max-width: 500px) {
   .prev2 { left: -35px; }
@@ -427,21 +431,200 @@ a {
   .next2 { right: -25px; }
 }
 
+/* Card styles */
+.law-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+.law-card__image {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.law-card__content {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.law-card__title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.law-card__text {
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.law-btn {
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.law-btn:hover {
+  background-color: #666;
+}
+
+
+
+
+
 
 /* About Us */
 
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+    
+}
+.heading h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 20px;
+    position: relative;
 
+}
+.heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+     background-color: #000000;
+}
+.heading p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+    
+}
+.about-image img{
+   width:  100%;
+    height: 300px;
+    display: block;
+    transition: 0.5s ease ;
+    object-fit: cover;
+}
+.about-image:hover img{
+    transform: scale(1.2);
+}
+.about-content{
+    flex: 1;
+}
+.about-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
+}
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+.about-content .read-more{
+display: inline-block;
+padding: 10px 20px;
+color: #fff;
+ background-color: #000000;
+font-size: 19px;
+text-decoration: none;
+border-radius: 25px;
+margin-top: 15px;
+transition: 0.3s ease;
+}
+.about-content .read-more:hover{
+    background-color: #666;
+
+}
+@media screen  and (max-width: 768px){
+    .heading{
+        padding: 0px 20px;
+    }
+    .heading h1{
+        font-size: 36px;
+    }
+    .heading p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .container{
+        padding: 0px;
+    }
+    .about{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .about-image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .about-content p{
+        padding: 0px;
+        font-size: 16px;
+    }
+    .about-content .read-more{
+        font-size: 16px;
+    }
+}
 
 /* Contact us */
 
 
     .container { max-width: 1200px; margin:0 auto; display:flex; flex-direction:column; gap:20px; }
 
-    .info-section, .form-map-container { background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+    .info-section1, .form-map-container { background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
 
-    .info-section { text-align:center; }
-    .info-section h2 { margin-bottom:15px; color:#333; }
-    .info-section p { margin-bottom:10px; color:#555; font-size:16px; }
+    .info-section1 { text-align:center; }
+    .info-section1 h2 { margin-bottom:15px; color:#333; }
+    .info-section1 p { margin-bottom:10px; color:#555; font-size:16px; }
+    .info-section1 p .mid{text-align: center;}
     .social-icons a { margin:0 8px; font-size:28px; color:#555; transition:color 0.3s; }
     .social-icons a:hover { color:#007BFF; }
 
@@ -449,8 +632,8 @@ a {
     .form-section, .map-section { flex:1 1 400px; padding:20px; border-radius:10px; background:#fff; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
     .form-section h2 { margin-bottom:15px; color:#333; }
     .form-section input, .form-section textarea { width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px; font-size:16px; }
-    .form-section button { background:#007BFF; color:#fff; padding:12px 20px; border:none; border-radius:6px; cursor:pointer; font-size:16px; transition:background 0.3s; }
-    .form-section button:hover { background:#0056b3; }
+    .form-section button { background:#000000; color:#fff; padding:12px 20px; border:none; border-radius:6px; cursor:pointer; font-size:16px; transition:background 0.3s; }
+    .form-section button:hover { background:#666; }
     #formMessage { margin-top:10px; font-size:16px; color:green; }
     .map-section { min-height:400px; position:relative; }
     #map { width:100%; height:100%; border-radius:10px; }

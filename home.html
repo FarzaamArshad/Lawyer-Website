@@ -7,7 +7,12 @@
    <link rel="stylesheet" href="web.css">
    <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("EvfG21JMkWL_OIH7Y");
+</script>
+
+
 </head>
 <body>
   
@@ -57,37 +62,44 @@
 
 <!-- AboutMe -->
 
- <div class="responsive-container-block bigContainer">
+<div class="responsive-container-block bigContainer">
   <div class="responsive-container-block Container bottomContainer">
     <div class="ultimateImg">
-      <img class="mainImg" src="levi.jpeg"  >
+      <img class="mainImg" src="levi.jpeg">
       <div class="purpleBox">
         <p class="purpleText">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget purus lectus viverra in semper nec pretium mus.
+          Experienced lawyer in Lahore, Pakistan offering trusted legal services for individuals and businesses.
         </p>
-        
       </div>
     </div>
+
     <div class="allText bottomText">
       <p class="text-blk headingText">
-        About Me
+        <h1 style="font-family:Merriweather,serif;margin-bottom:30px; color: black;">About Me</h1>
       </p>
+
       <p class="text-blk subHeadingText">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lawyer in Lahore, Pakistan
       </p>
+
       <p class="text-blk description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum pulvinar ullamcorper suspendisse ac eget. Pellentesque tempus leo in ullamcorper quis vestibulum ligula elementum ut.
+        I am a professional lawyer in Lahore, Pakistan, with over 5 years of experience. I provide legal 
+        services in Corporate Law, Civil Law, Criminal Law, and Tax Law in Pakistan. As a dedicated advocate 
+        in Lahore, I assist both individuals and businesses with reliable legal advice, case handling, 
+        and representation under Pakistani law.
       </p>
-      <a class="explore">
-        View Services
+
+      <a class="explore" href="#services">
+        View Legal Services in Lahore
       </a>
     </div>
   </div>
 </div>
 
+
 <!-- Services -->
 
-  <div class="wrap">
+  <div class="wrap" id="services">
     <!-- Services -->
     <section id="services">
       <h1 style="font-family:Merriweather,serif;margin-top:30px; color: black;">Services</h1>
@@ -123,56 +135,173 @@
   <button class="nav2 prev2">&#10094;</button>
 
   <div class="slider2">
-    <div class="slide2 active2"><img src="dabi.jpeg"></div>
-    <div class="slide2"><img src="dabi1.jpeg"></div>
-    <div class="slide2"><img src="dabi3.jpeg"></div>
+    <!-- Slide 1 -->
+   <div class="slide2 active2">
+  <div class="law-card">
+    <div class="law-card__image" style="background-image: url('dabi1.jpeg');"></div>
+    <div class="law-card__content">
+      <div class="law-card__title">Taxation Law</div>
+      <p class="law-card__text">
+        We provide professional taxation law services in Pakistan for individuals and businesses.
+        Our tax lawyers assist with income tax, sales tax, tax returns, tax compliance, tax notices,
+        audits, and tax planning under Pakistani tax laws. We also represent clients before FBR
+        and tax authorities to protect their legal rights.
+      </p>
+      <button class="law-btn law-btn--block">View Details</button>
+    </div>
   </div>
+</div>
+
+
+    <!-- Slide 2 -->
+   <div class="slide2">
+  <div class="law-card">
+    <div class="law-card__image" style="background-image: url('dabi3.jpeg');"></div>
+    <div class="law-card__content">
+      <div class="law-card__title">Corporate Law</div>
+      <p class="law-card__text">
+        We provide complete corporate law services in Pakistan for startups, companies, and businesses.
+        Our corporate lawyers assist with company registration, SECP compliance, drafting contracts,
+        shareholder agreements, mergers, acquisitions, and corporate legal advisory under Pakistani law.
+      </p>
+      <button class="law-btn law-btn--block">View Details</button>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Slide 3 -->
+    <div class="slide2">
+      <div class="law-card">
+        <div class="law-card__image" style="background-image: url('dabi.jpeg');"></div>
+        <div class="law-card__content">
+          <div class="law-card__title">Civil Law</div>
+          <p class="law-card__text">
+             We provide civil law services in Pakistan for property disputes, family matters,
+            contracts, recovery cases, and other civil court cases. Our lawyers offer legal advice,
+              case preparation, and strong court representation to protect your legal rights.
+          </p>
+          <button class="law-btn law-btn--block">View Details</button>
+        </div>
+      </div>
+    </div>
+
+        <!-- Slide 4 -->
+<div class="slide2">
+  <div class="law-card">
+    <div class="law-card__image" style="background-image: url('criminal.jpeg');"></div>
+    <div class="law-card__content">
+      <div class="law-card__title">Criminal Law</div>
+      <p class="law-card__text">
+        Our criminal law services in Pakistan include bail matters, FIR cases, trials,
+        appeals, and criminal defense. We provide strong legal support and representation
+        to protect clients’ rights under Pakistani criminal law.
+      </p>
+      <button class="law-btn law-btn--block">View Details</button>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+
 
   <button class="nav2 next2">&#10095;</button>
 </div>
 
 
 
+
+
 <!-- AboutUs -->
-<h1>About Us</h1>
 
-
-
-<!-- Contact Us -->
+<div class="heading" id="about">
+  <h1>About Us</h1>
+  <p>
+    We are a trusted law firm in Lahore, Pakistan, providing professional legal services
+    for individuals and businesses with experience in Lahore High Court matters.
+  </p>
+</div>
 
 <div class="container">
-
-    <!-- Info Section (Top) -->
-    <div class="info-section">
-      <h2>Contact Information</h2>
-      <p><strong>Phone:</strong> +1 234 567 890</p>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Address:</strong> 123 Main Street, City, Country</p>
-      <div class="social-icons">
-        <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-square"></i></a>
-        <a href="https://instagram.com/yourpage" target="_blank"><i class="fab fa-instagram-square"></i></a>
-      </div>
+  <section class="about">
+    <div class="about-image">
+      <img src="levi.jpeg" alt="Law firm in Lahore Pakistan Lahore High Court">
     </div>
 
-    <!-- Form + Map Section -->
-    <div class="form-map-container">
-      <div class="form-section">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-          <input type="text" name="user_name" placeholder="Your Name" required>
-          <input type="email" name="user_email" placeholder="Your Email" required>
-          <input type="text" name="subject" placeholder="Subject" required>
-          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-        <p id="formMessage"></p>
-      </div>
-      <div class="map-section">
-        <div id="map"></div>
-      </div>
+    <div class="about-content">
+      <h2>Lawyers Practicing at Lahore High Court</h2>
+      <p>
+        Our law firm is based in Lahore, Pakistan, with over 5 years of experience in handling
+        legal cases before the Lahore High Court and other courts in Pakistan. We specialize
+        in Corporate Law, Civil Law, Criminal Law, and Tax Law. As experienced advocates in Lahore,
+        we provide reliable legal advice, strong representation, and practical legal solutions
+        for both individuals and businesses under Pakistani law.
+      </p>
+
+      <a href="#services" class="read-more">Read More</a>
+    </div>
+  </section>
+</div>
+
+<!-- Contact Us -->
+<div class="container" id="contact">
+
+  <!-- Info Section (Top) -->
+  <div class="info-section1">
+    <h2>Contact Information</h2>
+    <p><strong>Phone:</strong> +92 300 123 4567</p>
+    <p><strong>Email:</strong> info@yourlawfirm.com</p>
+    <p><strong>Address:</strong> Near Lahore High Court, Lahore, Pakistan</p>
+    <div class="social-icons">
+      <a href="https://facebook.com/yourpage" target="_blank">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="https://instagram.com/yourpage" target="_blank">
+        <i class="fab fa-instagram-square"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Form + Map Section -->
+  <div class="form-map-container">
+
+    <!-- Contact Form -->
+    <div class="form-section">
+      <h2>Contact Us</h2>
+     <form id="contactForm">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <input type="text" id="subject" placeholder="Subject" required>
+  <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<p id="formMessage"></p>
+
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+      <iframe
+        src="https://www.google.com/maps?q=Lahore+High+Court+Pakistan&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
 
   </div>
+</div>
+
+
+
+
+
 
 
 

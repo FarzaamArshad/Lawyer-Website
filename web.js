@@ -12,7 +12,7 @@ class THeader extends HTMLElement {
         unicons.href = "https://unicons.iconscout.com/release/v4.0.0/css/line.css";
         document.head.appendChild(unicons);
 
-        // ✅ Insert HTML + YOUR ORIGINAL CSS (UNCHANGED)
+        
         this.innerHTML = `
             <style>
                 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
@@ -22,6 +22,8 @@ class THeader extends HTMLElement {
                     box-sizing: border-box;
                     font-family: "Poppins", sans-serif;
                 }
+               
+    
                 body {
                     background: #f0faff;
                 }
@@ -110,21 +112,21 @@ class THeader extends HTMLElement {
                 }
             </style>
 
-            <nav class="nav">
+            <nav class="nav" id="home">
                 <i class="uil uil-bars navOpenBtn"></i>
                 <a href="#" class="logo">Lawyer</a>
 
                 <ul class="nav-links">
                     <i class="uil uil-times navCloseBtn"></i>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#home" class="scroll-link">Home</a></li>
+                    <li><a href="#services" class="scroll-link">Services</a></li>
+                    <li><a href="#about" class="scroll-link">About Us</a></li>
+                    <li><a href="#contact" class="scroll-link">Contact Us</a></li>
                 </ul>
             </nav>
         `;
 
-        // ✅ FIX: Scope to THIS component (no CSS changes)
+      //  nav open btn
         const nav = this.querySelector(".nav");
         const navOpenBtn = this.querySelector(".navOpenBtn");
         const navCloseBtn = this.querySelector(".navCloseBtn");
@@ -140,7 +142,6 @@ class THeader extends HTMLElement {
 }
 
 customElements.define("t-header", THeader);
-
 
 
 
@@ -264,6 +265,32 @@ function initMap() {
 }
 
 
+
+// Send Message
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // stop page reload
+
+  let params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value
+  };
+
+ emailjs.send("service_f4rlgkx","template_po8ak1s")
+    .then(() => {
+      alert("Email Sent Successfully!");
+      document.getElementById("contactForm").reset();
+    })
+    .catch((error) => {
+      console.error("FAILED...", error);
+      alert("Failed to send email.");
+    });
+});
+
+
+
+
 // Footer
 
 class TFooter extends HTMLElement {
@@ -286,8 +313,8 @@ ${this.getFooterCSS()}
                   <h3 class="column-title">Quick Links</h3>
                   <ul class="footer-nav">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">services</a></li>
-                    <li><a href="#practice">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                   </ul>
                 </div>
@@ -299,11 +326,7 @@ ${this.getFooterCSS()}
                   <p><strong>Address:</strong> 123 Justice Ave, Suite 400, New York, NY</p>
 
                   <div class="social-icons">
-                    <a href="https://linkedin.com/company/lawfirm" class="social-link" target="_blank" aria-label="LinkedIn">
-                      <svg class="social-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>
-                      </svg>
-                    </a>
+                   
 
                     <a href="https://twitter.com/lawfirm" class="social-link" target="_blank" aria-label="Twitter">
                       <svg class="social-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
